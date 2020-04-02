@@ -132,7 +132,13 @@
 
     // test if any columns on this board contain conflicts
     hasAnyColConflicts: function() {
-      var size =  // fixme
+      var size = this.get('n');
+      for(var i = 0; i < size; i ++) {
+        if(this.hasColConflictAt(i)) {
+          return true;
+        }
+      }
+      return false;
     },
 
 
