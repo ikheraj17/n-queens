@@ -1,4 +1,6 @@
-var iterMult = function(n, base, display){
+var iterMult = function(n) {
+  let display = 4;
+  let base = n * n;
   let filteredArrArrs = [];
   let filteredStrArrs = [];
   let filteredBoardArrs = [];
@@ -45,7 +47,6 @@ var iterMult = function(n, base, display){
       filteredBoardArrs.push(boardArr);
       filteredBoardStrs.push(boardStr);
 
-
       var filteredSquareBoard = [];
       for (let i = 0; i < n; i ++) {
         let boardRow = [];
@@ -59,8 +60,10 @@ var iterMult = function(n, base, display){
     }
 
   }
-
+  return filteredSquareBoards;
+/*
   console.log((display == 0) ? filteredArrArrs : (display == 1) ? filteredStrArrs : (display == 2) ? filteredBoardArrs:(display == 3) ? filteredBoardStrs : filteredSquareBoards);
-}
+*/
+},
 
-iterMult(4, 16, 4);
+iterMult(4);
